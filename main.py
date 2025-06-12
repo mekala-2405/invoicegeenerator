@@ -16,6 +16,8 @@ import datetime
     0                    595
 """
 def gen_invoice(ref_num, date, due_date, issued_to, pay_to, items, tax_rate, filename):
+    #Temp location for file storage on the desktop of cuurent Windows User. Need to create folders for different company profiles at desired user location.
+    save_path = os.path.join(os.path.expanduser("~"), "Desktop/", filename)
     c = canvas.Canvas(filename, pagesize=A4)
     width, height = A4
 
